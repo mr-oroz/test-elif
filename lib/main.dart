@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      home: const MainPage(),
+      home: const SignInPage(),
       routes: {
         '/main_page': (context) => const MainPage(),
         '/home_page': (context) => const HomePage(),
