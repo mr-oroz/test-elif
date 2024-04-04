@@ -19,6 +19,7 @@ class _ConsentTextState extends State<ConsentText> {
 
   @override
   Widget build(BuildContext context) {
+    final mainColor = Theme.of(context).primaryColor;
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
@@ -29,7 +30,7 @@ class _ConsentTextState extends State<ConsentText> {
           decoration: BoxDecoration(
               border: Border.all(
                 width: 2,
-                color: AppColors.main,
+                color: mainColor,
               ),
               shape: BoxShape.circle),
           child: InkWell(
@@ -38,8 +39,8 @@ class _ConsentTextState extends State<ConsentText> {
                 ? Container(
                     width: 26,
                     height: 26,
-                    decoration: const BoxDecoration(
-                        color: AppColors.main, shape: BoxShape.circle),
+                    decoration: BoxDecoration(
+                        color: mainColor, shape: BoxShape.circle),
                   )
                 : null,
           ),
@@ -60,9 +61,9 @@ class _ConsentTextState extends State<ConsentText> {
               TextSpan(
                 text: 'рассылку уведомлений.',
                 style: AppFonts.w400f16.copyWith(
-                  color: AppColors.main,
+                  color: mainColor,
                   decoration: TextDecoration.underline,
-                  decorationColor: AppColors.main,
+                  decorationColor: mainColor,
                 ),
               ),
             ],

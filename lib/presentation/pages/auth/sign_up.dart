@@ -3,7 +3,7 @@ import 'package:test_elif/presentation/theme/app_colors.dart';
 import 'package:test_elif/presentation/theme/app_fonts.dart';
 import 'package:test_elif/presentation/widgets/consent_text/consent_text.dart';
 import 'package:test_elif/presentation/widgets/my_buttons/app_button.dart';
-import 'package:test_elif/presentation/widgets/my_text_filed/my_text_field.dart';
+import 'package:test_elif/presentation/widgets/my_text_field/my_text_field.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -64,6 +64,9 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               const Spacer(),
               AppButton(
+                textStyle: AppFonts.w500f16,
+                width: double.infinity,
+                height: 47,
                 onPressed: () {
                   Navigator.pushNamed(context, '/verification_page');
                 },

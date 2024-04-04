@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_elif/presentation/theme/app_colors.dart';
 import 'package:test_elif/presentation/theme/app_fonts.dart';
 import 'package:test_elif/presentation/widgets/my_buttons/app_button.dart';
-import 'package:test_elif/presentation/widgets/my_text_filed/my_text_field.dart';
+import 'package:test_elif/presentation/widgets/my_text_field/my_text_field.dart';
 
 class ResetPasswordPage extends StatefulWidget {
   const ResetPasswordPage({super.key});
@@ -53,6 +53,9 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
               ),
               const Spacer(),
               AppButton(
+                textStyle: AppFonts.w500f16,
+                width: double.infinity,
+                height: 47,
                 onPressed: () {
                   Navigator.pushNamed(
                       context, '/reset_password_verification_page');

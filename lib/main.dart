@@ -7,6 +7,8 @@ import 'package:test_elif/presentation/pages/auth/sign_in.dart';
 import 'package:test_elif/presentation/pages/auth/sign_up.dart';
 import 'package:test_elif/presentation/pages/auth/verification.dart';
 import 'package:test_elif/presentation/pages/home/home.dart';
+import 'package:test_elif/presentation/pages/main/main_page.dart';
+import 'package:test_elif/presentation/theme/app_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,11 +22,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: AppColors.bgGrey,
+        primaryColor: AppColors.main,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: AppColors.textColor),
+          elevation: 0,
+        ),
       ),
-      home: const SignInPage(),
+      home: const MainPage(),
       routes: {
         '/home_page': (context) => const HomePage(),
+        '/main_page': (context) => const MainPage(),
         '/sign_up_page': (context) => const SignUpPage(),
         '/sign_in_page': (context) => const SignInPage(),
         '/verification_page': (context) => const VerificationPage(),

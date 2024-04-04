@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1001775407579",
+    "project_id": "test-elif-2b463",
+    "storage_bucket": "test-elif-2b463.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001775407579:android:ab1f59fc7f5baf8b8b47fe",
+        "android_client_info": {
+          "package_name": "com.example.test_elif"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTzhpGeBXokL2OV3-UdjGDTI6l_bXOXfY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

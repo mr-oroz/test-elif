@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_elif/presentation/theme/app_colors.dart';
 import 'package:test_elif/presentation/theme/app_fonts.dart';
 
 class AppTextButton extends StatelessWidget {
@@ -20,7 +19,7 @@ class AppTextButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           text,
-          style: AppFonts.w500f16.copyWith(color: AppColors.main),
+          style: AppFonts.w500f16.copyWith(color: Theme.of(context).primaryColor),
         ),
       ),
     );

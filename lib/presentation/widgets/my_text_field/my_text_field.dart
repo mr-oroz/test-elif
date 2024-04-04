@@ -35,7 +35,7 @@ class _MyTextFieldState extends State<MyTextField> {
                   _passwordVisible = !_passwordVisible;
                   setState(() {});
                 },
-                color: AppColors.main,
+                color: Theme.of(context).primaryColor,
               )
             : null,
         hintText: widget.hintText,

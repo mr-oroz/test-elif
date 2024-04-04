@@ -3,7 +3,7 @@ import 'package:test_elif/presentation/theme/app_colors.dart';
 import 'package:test_elif/presentation/theme/app_fonts.dart';
 import 'package:test_elif/presentation/widgets/my_buttons/app_button.dart';
 import 'package:test_elif/presentation/widgets/my_buttons/app_text_button.dart';
-import 'package:test_elif/presentation/widgets/my_text_filed/my_text_field.dart';
+import 'package:test_elif/presentation/widgets/my_text_field/my_text_field.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -80,6 +80,9 @@ class _SignInPageState extends State<SignInPage> {
               ),
               const Spacer(),
               AppButton(
+                textStyle: AppFonts.w500f16,
+                width: double.infinity,
+                height: 47,
                 onPressed: () {
                   Navigator.pushNamed(context, '/home_page');
                 },

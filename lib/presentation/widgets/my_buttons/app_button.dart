@@ -1,32 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:test_elif/presentation/theme/app_colors.dart';
-import 'package:test_elif/presentation/theme/app_fonts.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton({
     super.key,
     required this.onPressed,
-    required this.text,
+    required this.text, required this.width, required this.height, required this.textStyle,
   });
 
   final Function() onPressed;
   final String text;
-
+  final double width;
+  final double height; 
+  final TextStyle textStyle;
   @override
   Widget build(BuildContext context) {
+    final mainColor = Theme.of(context).primaryColor;
     return SizedBox(
-      width: double.infinity,
-      height: 47,
+      width: width,
+      height: height,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.main,
+            backgroundColor: mainColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             )),
         child: Text(
           text,
-          style: AppFonts.w500f16.copyWith(
+          style: textStyle.copyWith(
             color: Colors.white,
           ),
         ),

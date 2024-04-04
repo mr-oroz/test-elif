@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_elif/presentation/theme/app_colors.dart';
 import 'package:test_elif/presentation/theme/app_fonts.dart';
 import 'package:test_elif/presentation/widgets/my_buttons/app_button.dart';
-import 'package:test_elif/presentation/widgets/my_text_filed/my_text_field.dart';
+import 'package:test_elif/presentation/widgets/my_text_field/my_text_field.dart';
 
 class NewPasswordPage extends StatefulWidget {
   const NewPasswordPage({super.key});
@@ -61,6 +61,9 @@ class _NewPasswordPageState extends State<NewPasswordPage> {
               ),
               const Spacer(),
               AppButton(
+                textStyle: AppFonts.w500f16,
+                width: double.infinity,
+                height: 47,
                 onPressed: () {
                   Navigator.pushNamedAndRemoveUntil(
                       context, '/sign_in_page', (route) => false);
