@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_elif/presentation/data/bottom__navigation_items.dart';
+import 'package:test_elif/presentation/data/data.dart';
 import 'package:test_elif/presentation/pages/account/account.dart';
 import 'package:test_elif/presentation/pages/announcement/announcement.dart';
 import 'package:test_elif/presentation/pages/group/group.dart';

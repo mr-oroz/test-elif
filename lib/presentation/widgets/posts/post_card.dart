@@ -1,38 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:test_elif/presentation/models/post_card_model.dart';
 import 'package:test_elif/presentation/theme/app_colors.dart';
 import 'package:test_elif/presentation/theme/app_fonts.dart';
 import 'package:test_elif/presentation/widgets/my_buttons/subscribe_button.dart';
-
-import 'package:test_elif/presentation/widgets/post_icon_text/post_icon_text.dart';
-import 'package:test_elif/presentation/widgets/user_avatar_with_name/user_avatar_with_name.dart';
+import 'package:test_elif/presentation/widgets/posts/post_icon_text.dart';
+import 'package:test_elif/presentation/widgets/users/user_avatar_with_name.dart';
 import 'package:test_elif/resources/resources.dart';
 
 class PostCard extends StatelessWidget {
   const PostCard({
     super.key,
-    required this.username,
-    required this.data,
-    required this.avatar,
-    required this.postText,
-    required this.like,
-    this.postImage,
-    this.comment,
-    required this.repost,
+    required this.onPressed,
+    this.index,
+    required this.post,
   });
 
-  final String username;
-  final String data;
-  final String avatar;
-  final String postText;
-
-  final String like;
-  final Widget? postImage;
-  final String? comment;
-  final String repost;
+  final PostCardModel post;
+  final Function() onPressed;
+  final int? index;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 16, top: index == 0 ? 16 : 0),
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       width: double.infinity,
       decoration: const BoxDecoration(color: Colors.white),
@@ -44,9 +34,9 @@ class PostCard extends StatelessWidget {
             children: [
               Flexible(
                 child: UserAvatarWithName(
-                  username: username,
-                  avatar: avatar,
-                  data: data,
+                  username: post.username,
+                  avatar: post.avatar,
+                  data: post.data,
                 ),
               ),
               const Flexible(child: SubscribeButton())
@@ -54,30 +44,32 @@ class PostCard extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           Text(
-            postText,
+            post.text,
             style: AppFonts.w400f16.copyWith(
               color: AppColors.textColor,
             ),
           ),
-          if (postImage != null) const SizedBox(height: 6),
-          if (postImage != null) postImage!,
+          if (post.postImages != null) const SizedBox(height: 6),
+          if (post.postImages != null) post.postImages!,
           const SizedBox(height: 6),
           Row(
             children: [
               PostIconText(
+                onPessed: () {},
                 icon: AppIcons.heart,
-                text: like,
+                text: post.like,
               ),
-              if (comment != null) const SizedBox(width: 6),
-              if (comment != null)
-                PostIconText(
-                  icon: AppIcons.comment,
-                  text: comment!,
-                ),
               const SizedBox(width: 6),
               PostIconText(
+                onPessed: onPressed,
+                icon: AppIcons.comment,
+                text: post.comments,
+              ),
+              const SizedBox(width: 6),
+              PostIconText(
+                onPessed: () {},
                 icon: AppIcons.repost,
-                text: repost,
+                text: post.repost,
               ),
             ],
           )

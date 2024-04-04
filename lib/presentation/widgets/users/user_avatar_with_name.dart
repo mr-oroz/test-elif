@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_elif/presentation/widgets/user_details/user_details.dart';
+import 'package:test_elif/presentation/widgets/users/user_details.dart';
 
 class UserAvatarWithName extends StatelessWidget {
   const UserAvatarWithName({

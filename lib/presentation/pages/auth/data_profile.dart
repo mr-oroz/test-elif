@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_elif/presentation/theme/app_colors.dart';
 import 'package:test_elif/presentation/theme/app_fonts.dart';
 import 'package:test_elif/presentation/widgets/my_buttons/app_button.dart';
-import 'package:test_elif/presentation/widgets/my_text_field/my_text_field.dart';
+import 'package:test_elif/presentation/widgets/my_pinputs/my_text_field.dart';
 
 class DataProfilePage extends StatefulWidget {
   const DataProfilePage({super.key});

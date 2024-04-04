@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_elif/presentation/theme/app_colors.dart';
 import 'package:test_elif/presentation/theme/app_fonts.dart';
 import 'package:test_elif/presentation/widgets/my_buttons/app_button.dart';
-import 'package:test_elif/presentation/widgets/my_pinput/my_pinput.dart';
+import 'package:test_elif/presentation/widgets/my_pinputs/my_pinput.dart';
 
 class ResetPasswordVerificationPage extends StatefulWidget {
   const ResetPasswordVerificationPage({super.key});
